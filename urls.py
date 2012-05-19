@@ -14,6 +14,11 @@ urlpatterns = patterns('',
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
     
+    # index
+    (r'^$', 'opendcm.views.index'),
+    (r'^system/(?P<name>[-\w]+)/$', 'opendcm.views.detail'),
+    
+    
     # user auth includes
     (r'^auth/', include('userauth.urls')),
 )
