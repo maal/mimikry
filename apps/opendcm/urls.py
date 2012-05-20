@@ -43,8 +43,6 @@ v1_api.register(NextBootResource())
 v1_api.register(EventResource())
 v1_api.register(SystemGroupResource())
 
-
-
 urlpatterns = patterns('opendcm.views',
     url (r'^$', 'index', name='opendcm_index'),
     url(r'^system/(?P<name>[-\w]+)/$', 'system', name='opendcm_system_detail'),
